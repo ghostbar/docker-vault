@@ -17,5 +17,7 @@ RUN apk --update add wget ca-certificates && \
     apk del wget ca-certificates && \
     rm -rf /var/cache/apk/*
 
+EXPOSE 8200
+
 ENTRYPOINT ["/usr/local/bin/vault"]
 CMD ["version"]
